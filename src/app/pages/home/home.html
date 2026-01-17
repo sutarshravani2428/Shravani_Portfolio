@@ -1,0 +1,404 @@
+<div class="relative w-full h-[92vh] bg-black bg-center overflow-hidden zalando-sans-semiexpanded ">
+  <div class="m-0 p-0 max-[413px]:hidden">
+    <app-spline-viewer></app-spline-viewer>
+  </div>
+  <div class="text-white text-4xl absolute top-1.5 left-10 z-10 max-[413px]:left-16 max-[413px]:top-14">
+    <h1 class="text-zinc-400 max-[769px]:text-4xl max-[413px]:text-center ">Hey, there</h1>
+    <h1 class="text-white text-8xl max-[769px]:text-6xl">Shravani</h1>
+  </div>
+  <div class="text-white absolute bottom-40 left-10 z-10 w-xs ">
+    <p class="text-zinc-400">"Programs must be written for people to read, and only incidentally for machines to
+      execute. The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds castles in
+      the air, from air, creating by exertion of the imagination."<br> — Harold Abelson </p>
+  </div>
+  <div
+    class="text-white max-[769px]:w-40  max-[769px]:mr-5 max-[413px]:mr-0 text-4xl absolute top-40 max-[413px]:top-60 max-[413px]:text-center max-[413px]:w-full max-[769px]:top-20  max-[1025px]:top-30 right-10 max-[769px]:right-30 max-[413px]:right-0 z-10 ">
+    <h1 class="text-zinc-400 max-[413px]:text-6xl">I am</h1>
+    <h1 class="text-white text-5xl max-[1025px]:text-[2.4rem] max-[413px]:text-[2rem]">Software Developer</h1>
+  </div>
+
+</div>
+<div
+  class=" w-full h-screen bg-white relative text-black flex max-[413px]:flex-col items-center justify-between  px-48 max-[769px]:px-10 max-[413px]:px-2 max-[413px]:py-14  max-[1025px]:px-20 font-normal py-28 montserrat ">
+  <div
+    class="w-[20%] border-r-2 max-[413px]:border-r-0 max-[413px]:text-center max-[413px]:w-full text-4xl border-black ">
+    <h1>About</h1>
+  </div>
+  <div class="w-[70%] text-2xl max-[769px]:text-xl max-[413px]:text-center max-[1025px]:text-xl">
+
+    <p>
+      I’m a final-year B.Tech student in Data Science at Kolhapur Institute of
+      Technology, Maharashtra, maintaining a GPA of 8.1/10. My journey blends
+      data, AI, and development — turning information into intelligent
+      solutions.
+    </p>
+    <br>
+    <p>
+      With hands-on experience in Machine Learning, Python, and Data Analytics,
+      I’ve built models for classification, regression, and exploratory data
+      analysis using Pandas, NumPy, and Scikit-learn.
+    </p>
+    <br>
+    <p>
+      Alongside my data focus, I’m passionate about web development using Django
+      (backend) and Angular (frontend), building scalable, modern web apps.
+    </p>
+  </div>
+</div>
+
+<!-- Tech Marquee -->
+<div class="bg-black w-full overflow-hidden py-10 montserrat">
+  <div class="relative flex whitespace-nowrap animate-marqueerl gap-20">
+
+    <!-- Repeat logos twice for smooth loop -->
+    <span class="tech ">ANGULAR</span>
+    <span class="tech ">PYTHON</span>
+    <span class="tech ">DJANGO</span>
+    <span class="tech ">FASTAPI</span>
+    <span class="tech ">TAILWIND</span>
+    <span class="tech ">SQL</span>
+    <span class="tech ">POWER BI</span>
+    <span class="tech ">TABLEAU</span>
+    <span class="tech ">NUMPY</span>
+    <span class="tech ">PANDAS</span>
+
+    <span class="tech ">ANGULAR</span>
+    <span class="tech ">PYTHON</span>
+    <span class="tech ">DJANGO</span>
+    <span class="tech ">FASTAPI</span>
+    <span class="tech ">TAILWIND</span>
+    <span class="tech ">SQL</span>
+    <span class="tech ">POWER BI</span>
+    <span class="tech ">TABLEAU</span>
+    <span class="tech ">NUMPY</span>
+    <span class="tech ">PANDAS</span>
+
+    <span class="tech ">ANGULAR</span>
+    <span class="tech ">PYTHON</span>
+    <span class="tech ">DJANGO</span>
+    <span class="tech ">FASTAPI</span>
+    <span class="tech ">TAILWIND</span>
+    <span class="tech ">SQL</span>
+    <span class="tech ">POWER BI</span>
+    <span class="tech ">TABLEAU</span>
+    <span class="tech ">NUMPY</span>
+    <span class="tech ">PANDAS</span>
+
+  </div>
+</div>
+
+<!-- Skill section -->
+<div
+  class="bg-black w-full h-[72%] flex items-center justify-center px-20 max-[413px]:px-2 max-[413px]:h-auto max-[413px]:py-6">
+
+  <div
+    class="flex w-full h-[80%] max-w-6xl rounded-xl overflow-hidden font-mono shadow-2xl border border-zinc-800 max-[413px]:flex-col max-[413px]:h-auto">
+
+    <!-- Explorer -->
+    <aside
+      class="w-72 bg-[#181818] p-4 border-r border-zinc-800 max-[413px]:w-full max-[413px]:border-r-0 max-[413px]:border-b max-[413px]:p-3">
+
+      <p class="text-xs tracking-widest text-zinc-500 mb-4 max-[413px]:mb-2 max-[413px]:text-[10px]">
+        EXPLORER
+      </p>
+
+      <!-- Folder -->
+      <div class="flex items-center gap-2 cursor-pointer text-[#4FC3F7] font-semibold select-none max-[413px]:text-sm"
+        (click)="toggleFolder()">
+        <span>{{ folderOpen ? '▾' : '▸' }}</span>
+        <span>📁</span>
+        <span>skills</span>
+      </div>
+
+      <!-- Files -->
+      <ul *ngIf="folderOpen" class="ml-6 mt-3 space-y-1
+                                     max-[413px]:ml-3 max-[413px]:mt-2">
+
+        <!-- programming -->
+        <li (click)="openFile('programming')" class="flex items-center gap-2 px-3 py-1 rounded cursor-pointer
+                 max-[413px]:px-2 max-[413px]:py-1" [class.bg-[#2A2D2E]]="selectedFile === 'programming'">
+          <span class="text-sky-400">📘</span>
+          <span class="text-zinc-200 max-[413px]:text-sm">
+            programming-tools.ts
+          </span>
+        </li>
+
+        <!-- data -->
+        <li (click)="openFile('data')" class="flex items-center gap-2 px-3 py-1 rounded cursor-pointer
+                 max-[413px]:px-2 max-[413px]:py-1" [class.bg-[#2A2D2E]]="selectedFile === 'data'">
+          <span class="text-purple-400">📊</span>
+          <span class="text-zinc-200 max-[413px]:text-sm">
+            data-science.ml
+          </span>
+        </li>
+
+        <!-- frameworks -->
+        <li (click)="openFile('frameworks')" class="flex items-center gap-2 px-3 py-1 rounded cursor-pointer
+                 max-[413px]:px-2 max-[413px]:py-1" [class.bg-[#2A2D2E]]="selectedFile === 'frameworks'">
+          <span class="text-yellow-400">🧩</span>
+          <span class="text-zinc-200 max-[413px]:text-sm">
+            frameworks.json
+          </span>
+        </li>
+
+      </ul>
+    </aside>
+
+    <!-- Viewer -->
+    <main class="flex-1 bg-[#0E0E0E] p-8 text-zinc-200 overflow-y-auto
+                 max-[413px]:p-4 max-[413px]:text-sm">
+
+      <ng-container [ngSwitch]="selectedFile">
+
+        <!-- Programming -->
+        <div *ngSwitchCase="'programming'">
+          <h2 class="text-xl mb-6 text-sky-400
+                     max-[413px]:text-base max-[413px]:mb-4">
+            programming-tools.ts
+          </h2>
+
+          <ul class="grid grid-cols-2 gap-2
+                     max-[413px]:grid-cols-1">
+            <li>Python</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>SQL</li>
+            <li>HTML5 / CSS3</li>
+            <li>Excel</li>
+            <li>Power BI</li>
+            <li>Tableau</li>
+            <li>Matplotlib</li>
+          </ul>
+        </div>
+
+        <!-- Data -->
+        <div *ngSwitchCase="'data'">
+          <h2 class="text-xl mb-6 text-purple-400
+                     max-[413px]:text-base max-[413px]:mb-4">
+            data-science.ml
+          </h2>
+
+          <ul class="space-y-2">
+            <li>Data Preprocessing</li>
+            <li>Exploratory Data Analysis</li>
+            <li>Time Series Analysis</li>
+            <li>Regression</li>
+            <li>Classification</li>
+          </ul>
+        </div>
+
+        <!-- Frameworks -->
+        <div *ngSwitchCase="'frameworks'">
+          <h2 class="text-xl mb-6 text-yellow-400
+                     max-[413px]:text-base max-[413px]:mb-4">
+            frameworks.json
+          </h2>
+
+          <ul class="grid grid-cols-2 gap-2
+                     max-[413px]:grid-cols-1">
+            <li>Angular</li>
+            <li>Django</li>
+            <li>FastAPI</li>
+            <li>PostgreSQL</li>
+            <li>JUnit</li>
+            <li>Material UI</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <!-- Default -->
+        <p *ngSwitchDefault class="text-zinc-500 max-[413px]:text-sm">
+          Open a file to explore skills
+        </p>
+
+      </ng-container>
+
+    </main>
+  </div>
+</div>
+
+
+<!-- Tech Marquee -->
+<div class="bg-black w-full overflow-hidden py-10 montserrat">
+  <div class="relative flex whitespace-nowrap animate-marqueelr gap-20">
+
+    <!-- Repeat logos twice for smooth loop -->
+    <span class="tech">ANGULAR</span>
+    <span class="tech">PYTHON</span>
+    <span class="tech">DJANGO</span>
+    <span class="tech">FASTAPI</span>
+    <span class="tech">TAILWIND</span>
+    <span class="tech">SQL</span>
+    <span class="tech">POWER BI</span>
+    <span class="tech">TABLEAU</span>
+    <span class="tech">NUMPY</span>
+    <span class="tech">PANDAS</span>
+
+    <span class="tech">ANGULAR</span>
+    <span class="tech">PYTHON</span>
+    <span class="tech">DJANGO</span>
+    <span class="tech">FASTAPI</span>
+    <span class="tech">TAILWIND</span>
+    <span class="tech">SQL</span>
+    <span class="tech">POWER BI</span>
+    <span class="tech">TABLEAU</span>
+    <span class="tech">NUMPY</span>
+    <span class="tech">PANDAS</span>
+
+  </div>
+</div>
+
+
+
+
+<div
+  class="h-screen flex flex-col items-center justify-center mb-0 pb-40 max-[413px]:items-center max-[413px]:h-[90vh] max-[413px]:pb-40 max-[769px]:pb-10  max-[1025px]:pb-20 gap-16 max-[769px]:justify-around">
+
+  <div class="w-full h-fit flex flex-col gap-[-10px] items-center pt-10  max-[1025px]:pt-0">
+    <img src="../royal.png" class="w-[20rem] text object-contain rotate-180" alt="">
+    <h1
+      class="w-full text-center tracking-[0.8rem] text-4xl max-[769px]:text-3xl max-[1025px]:text-3xl max-[413px]:text-xl font-semibold montserrat m-0">
+      CERTIFICATION</h1>
+    <img src="../royal.png" class="w-[20rem] text object-contain" alt="">
+  </div>
+
+  <div
+    class="flex max-[769px]:flex-col items-center h-[30%] justify-center gap-16 max-[769px]:gap-10 max-[413px]:gap-20 max-[1025px]:gap-10 montserrat max-[769px]:px-10 max-[1025px]:px-10">
+    <div class="flex items-center gap-4  ">
+      <img src="../leaf1.png" class="w-16 h-32 max-[413px]:w-12 max-[413px]:h-24" alt="">
+      <div class="text-center align-middle">
+        <h2 class="font-bold text-xl "> The Complete 2024
+          <br>Web Development Bootcamp
+        </h2>
+        <p class="text-zinc-500 text-lg font-semibold ">Udemy (Feb 2025)</p>
+      </div>
+      <img src="../leaf2.png" class="w-16 h-32 max-[413px]:w-12 max-[413px]:h-24" alt="">
+    </div>
+    <div class="flex items-center gap-0 pl-30 max-[769px]:pl-0 max-[1025px]:pl-10">
+      <img src="../leaf1.png" class="w-16 h-32 max-[413px]:w-12 max-[413px]:h-24" alt="">
+      <div class="text-center align-middle">
+        <h2 class="font-bold text-xl "> Data Analytics and Visualization <br> Job Simulation-Accenture</h2>
+        <p class="text-zinc-500 text-lg font-semibold ">Via Forage (Apr 2024)</p>
+      </div>
+      <img src="../leaf2.png" class="w-16 h-32 max-[413px]:w-12 max-[413px]:h-24" alt="">
+    </div>
+  </div>
+</div>
+
+
+<!-- Projects Section -->
+<section id="projects" class="bg-black text-white py-16 px-4 montserrat">
+  <div class="max-w-6xl max-[769px]:w-xl max-[413px]:w-xs max-[1025px]:w-3xl mx-auto">
+    <h2 class="text-4xl  mb-12 text-center montserrat">Projects</h2>
+
+    <div class="space-y-8">
+
+      <!-- Project 1 -->
+      <div class="bg-zinc-800 bg-opacity-80 p-6 rounded-xl shadow-lg shadow-zinc-500/60">
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl max-[769px]:text-xl font-semibold mb-1">School ERP System</h3>
+          <img src="../share-square.png" class="w-5 h-5 hover:cursor-pointer hover:scale-110 transition-all duration-75"
+            alt="">
+        </div>
+        <span class="text-gray-400 text-sm">10/2025 - Present</span>
+        <p class="mt-3 text-gray-300">
+          Full stack project for managing school ERP needs.
+        </p>
+        <ul class="list-disc list-inside mt-2 text-gray-400 space-y-1">
+          <li>Implemented role-based authentication with secure token login.</li>
+          <li>Developed ERP modules: Student Management, Attendance, Exams, Fees, Timetable, Dashboards.</li>
+          <li>Integrated RESTful APIs between Angular frontend and Django backend.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-zinc-800 bg-opacity-80 p-6 rounded-xl shadow-lg shadow-zinc-500/60">
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl font-semibold max-[769px]:text-xl mb-1">Fake Profile Account Detection</h3>
+          <img src="../share-square.png" class="w-5 h-5 hover:cursor-pointer hover:scale-110 transition-all duration-75"
+            alt="">
+        </div>
+        <span class="text-gray-400 text-sm">08/2024 - Present</span>
+        <p class="mt-3 text-gray-300">
+          Machine learning model to detect fake social media profiles.
+        </p>
+        <ul class="list-disc list-inside mt-2 text-gray-400 space-y-1">
+          <li>ML-based classifier using behavioral and metadata features.</li>
+          <li>Random Forest algorithm implemented with TensorFlow.</li>
+          <li>CI/CD using Travis CI for automated testing and deployment.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-zinc-800 bg-opacity-80 p-6 rounded-xl shadow-lg shadow-zinc-500/60">
+        <div class="flex items-center justify-between">
+
+          <h3 class="text-2xl font-semibold max-[769px]:text-xl mb-1">Online Car Marketplace</h3>
+          <img src="../share-square.png" class="w-5 h-5 hover:cursor-pointer hover:scale-110 transition-all duration-75"
+            alt="">
+
+        </div>
+        <span class="text-gray-400 text-sm">01/2025 - 05/2025</span>
+        <p class="mt-3 text-gray-300">
+          Platform for buying and selling pre-owned cars.
+        </p>
+        <ul class="list-disc list-inside mt-2 text-gray-400 space-y-1">
+          <li>Backend APIs for listings, user management, and transactions.</li>
+          <li>Vehicle recommendation system based on performance metrics.</li>
+          <li>Planned upgrades: ML for price prediction, image analysis, sentiment analysis, KYC verification.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-black text-white py-8 max-[769px]:py-4 max-[1025px]:py-4 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center montserrat">
+
+    <!-- Left Section -->
+    <div class="mb-4 md:mb-0 text-center md:text-left">
+      <h2 class="text-2xl font-semibold">Shravani Sutar</h2>
+      <p class="text-gray-400">Software Engineer</p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="flex space-x-6">
+      <a href="https://github.com/yourusername" target="_blank"
+        class="text-gray-400 hover:text-white transition-colors">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z" />
+        </svg>
+
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"
+        class="text-gray-400 hover:text-white transition-colors">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.804-1.75-1.732 0-.927.784-1.732 1.75-1.732s1.75.805 1.75 1.732c0 .928-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.026-3.062-1.866-3.062-1.868 0-2.154 1.459-2.154 2.968v5.698h-3v-10h2.882v1.367h.041c.401-.761 1.379-1.562 2.838-1.562 3.034 0 3.595 1.997 3.595 4.592v5.603z" />
+        </svg>
+      </a>
+      <a href="https://twitter.com/yourusername" target="_blank"
+        class="text-gray-400 hover:text-white transition-colors">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11 4C7.134 4 4 7.134 4 11L4 39C4 42.866 7.134 46 11 46L39 46C42.866 46 46 42.866 46 39L46 11C46 7.134 42.866 4 39 4L11 4ZM13.0859 13L21.0234 13L26.6602 21.0098L33.5 13L36 13L27.7891 22.6133L37.9141 37L29.9785 37L23.4375 27.707L15.5 37L13 37L22.3086 26.1035L13.0859 13ZM16.9141 15L31.0215 35L34.0859 35L19.9785 15L16.9141 15Z" />
+        </svg>
+
+      </a>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="mt-6 max-[769px]:mt-4 max-[1025px]:mt-4 text-center text-gray-500 text-sm">
+    &copy; 2026 Shravani Sutar. All rights reserved.
+  </div>
+</footer>

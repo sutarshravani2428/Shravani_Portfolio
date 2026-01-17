@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+.unifrakturmaguntia {
+  font-family: "UnifrakturMaguntia", cursive;
+
+  font-style: normal;
+}
+
+
+.zalando-sans-semiexpanded {
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+
+}
+
+.playfair-display-sc-regular {
+  font-family: "Playfair Display SC", serif;
+  font-style: normal;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

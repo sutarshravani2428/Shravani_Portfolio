@@ -1,0 +1,20 @@
+<div class="relative w-full h-[92vh] overflow-hidden">
+    <!-- Desktop: Spline iframe -->
+    <iframe
+      *ngIf="showSpline && !isMobile"
+      src="https://my.spline.design/nexbotrobotcharacterconcept-ed61d286e4bedbbbca943513ee107b3c/"
+      frameborder="0"
+      class="absolute top-0 left-0 w-full h-[100vh]"
+      style="pointer-events: auto;"
+      loading="lazy"
+    ></iframe>
+  
+    <!-- Mobile fallback -->
+    <img
+      *ngIf="isMobile"
+      src="assets/spline-fallback.png"
+      class="absolute top-0 left-0 w-full h-full"
+      alt="Spline fallback"
+    >
+  </div>
+  
